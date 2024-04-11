@@ -1,0 +1,25 @@
+#
+# This is SodaPm initiator file (yep, '.initiator.toml' extension is required), and...
+# -> please, use only abs paths!
+# -> all fields are required!
+# (if this file is invalid, your app simply won't start (ERRORED_ON_STARTUP state))
+
+
+[Initiator]
+
+name = "name"
+cwd = "/abs/path" # should exist
+
+
+# write command as if it was your console, commandBuilderHook will do all the magic
+command = "java -jar example.jar" # and yep, abs paths
+
+
+
+env_vars = {} # remember, all env vars should be Strings (leave empty for empty)
+
+
+restart_on_fail = true
+max_ram_restart = 2048 # in MB (0 for "+inf")
+
+
